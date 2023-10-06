@@ -41,7 +41,7 @@ async function main() {
         const allowForks = core.getBooleanInput("allow_forks")
         let dryRun = core.getInput("dry_run")
 
-        const client = github.getOctokit(myToken, {baseUrl: "https://api.github.com"})
+        const client = github.getOctokit(token, {baseUrl: "https://api.github.com"})
 
         core.info(`==> Repository: ${owner}/${repo}`)
         core.info(`==> Artifact name: ${name}`)
